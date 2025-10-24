@@ -4,6 +4,8 @@ This repository contains a complete guide on Next.js.
 
 ## Create New Project
 
+You don't need to install a CLI to create a new Next.js project.
+
 ```bash
 npx create-next-app@latest
 
