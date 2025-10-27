@@ -7,7 +7,7 @@ export default function OrderProduct() {
 
   const handleClick = () => {
     console.log('Placing order...');
-    router.push('/');
+    router.replace('/');
   };
 
   return (
