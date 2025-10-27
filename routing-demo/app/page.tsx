@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 
+import './globals.css';
+
 // export default function Home() {
 //   return (
 //     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -76,11 +78,15 @@ export default function Home() {
   return (
     <>
       <h1>Welcome home!</h1>
-      <Link href="/blog">Blog</Link>
-      <Link href="/products">Products</Link>
-      <Link href="/articles/breaking-news-123?lang=en">Read in English</Link>
-      <Link href="/articles/breaking-news-123?lang=fr">Read in French</Link>
-      <Link href="/articles/breaking-news-123?lang=es">Read in Spanish</Link>
+      <div className="flex flex-col gap-4">
+        <Link href="/blog">Blog</Link>
+        <Link href="/products">Products</Link>
+      </div>
+      <div className="flex flex-col gap-4">
+        <Link href="/articles/breaking-news-123?lang=en">Read in English</Link>
+        <Link href="/articles/breaking-news-123?lang=fr">Read in French</Link>
+        <Link href="/articles/breaking-news-123?lang=es">Read in Spanish</Link>
+      </div>
     </>
   );
 }
