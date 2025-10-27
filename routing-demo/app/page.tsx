@@ -38,6 +38,9 @@ export default function Home() {
           <p>
             Link to blog: <Link href="/blog">Blog</Link>
           </p>
+          <p>
+            Link to products: <Link href="/products">Products</Link>
+          </p>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
