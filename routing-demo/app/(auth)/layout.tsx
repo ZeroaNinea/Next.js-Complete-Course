@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 import './styles.css';
 
@@ -16,11 +17,15 @@ export default function AuthLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [input, setInput] = useState('');
   const pathName = usePathname();
 
   return (
     <div>
       <div className="flex gap-4">
+        <div>
+          <input value={input} onChange={(e) => setInput(e.target.value)} />
+        </div>
         {navLinks.map((link) => {
           const isActive = pathName === link.href;
 
