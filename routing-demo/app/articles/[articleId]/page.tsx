@@ -1,14 +1,15 @@
 import Link from 'next/link';
+import { use } from 'react';
 
-export default async function NewsArticle({
+export default function NewsArticle({
   params,
   searchParams,
 }: {
   params: Promise<{ articleId: string }>;
-  searchParams: { lang: 'en' | 'fr' | 'es' };
+  searchParams: Promise<{ lang: 'en' | 'fr' | 'es' }>;
 }) {
-  const { articleId } = await params;
-  const { lang } = await searchParams;
+  const { articleId } = use(params);
+  const { lang = 'en' } = use(searchParams);
 
   return (
     <div>
