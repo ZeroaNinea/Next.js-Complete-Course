@@ -24,7 +24,11 @@ export default function AuthLayout({
     <div>
       <div className="flex gap-4">
         <div>
-          <input value={input} onChange={(e) => setInput(e.target.value)} />
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
         </div>
         {navLinks.map((link) => {
           const isActive = pathName === link.href;
