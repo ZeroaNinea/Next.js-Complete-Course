@@ -13,13 +13,15 @@ export default function AuthLayout({
 }>) {
   return (
     <div>
-      {navLinks.map((link) => {
-        return (
-          <Link key={link.name} href={link.href}>
-            {link.name}
-          </Link>
-        );
-      })}
+      <div className="flex gap-4">
+        {navLinks.map((link) => {
+          return (
+            <Link key={link.name} href={link.href}>
+              {link.name}
+            </Link>
+          );
+        })}
+      </div>
       {children}
     </div>
   );
