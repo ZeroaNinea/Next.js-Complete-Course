@@ -47,5 +47,3 @@ export default function Modal({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
-
-// test commit
