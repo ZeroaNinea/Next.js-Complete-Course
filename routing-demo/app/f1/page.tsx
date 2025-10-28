@@ -11,3 +11,10 @@ export default function F1() {
     </>
   );
 }
+
+/*
+(.) to match segments on the same level.
+(..) to match segments one level above.
+(..)(..) to match segments two levels above.
+(...) to match segments from the root app directory.
+*/
