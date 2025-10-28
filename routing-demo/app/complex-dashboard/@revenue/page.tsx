@@ -1,4 +1,4 @@
-import { Card } from '../../_components/card';
+import { Card } from '@/components/card';
 
 export default function RevenueMetricals() {
   return <Card>Revenue Metricals</Card>;
