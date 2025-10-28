@@ -1,3 +1,5 @@
+import { Card } from '../../_components/card';
+
 export default function RevenueMetricals() {
-  return <h1>Revenue Metricals</h1>;
+  return <Card>Revenue Metricals</Card>;
 }
