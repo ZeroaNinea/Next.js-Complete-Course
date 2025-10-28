@@ -7,6 +7,7 @@ export const Card = ({ children }: { children: React.ReactNode }) => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    gap: '10px',
   };
 
   return <div style={cardStyle}>{children}</div>;
