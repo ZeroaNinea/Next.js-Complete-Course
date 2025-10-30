@@ -1,11 +1,19 @@
-import { NextRequest } from 'next/server';
+// import { NextRequest } from 'next/server';
+import { headers } from 'next/headers';
 
-export async function GET(request: NextRequest) {
-  const requestHeaders = new Headers(request.headers);
-  console.log(requestHeaders.get('Authorization'));
+export async function GET(/* request: NextRequest */) {
+  // const requestHeaders = new Headers(request.headers);
+  // console.log(requestHeaders.get('Authorization'));
 
-  return new Response(JSON.stringify({ data: 'API Response' }), {
-    headers: { 'Content-Type': 'application/json' },
+  const headersList = await headers();
+  console.log(headersList.get('Authorization'));
+
+  // return new Response(JSON.stringify({ data: 'API Response' }), {
+  //   headers: { 'Content-Type': 'application/json' },
+  //   status: 200,
+  // });
+  return new Response('<h1>Profile API data.</h1>', {
+    headers: { 'Content-Type': 'text/html' },
     status: 200,
   });
 }
