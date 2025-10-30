@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { headers } from 'next/headers';
+import { headers, cookies } from 'next/headers';
 
 export async function GET(request: NextRequest) {
   // const requestHeaders = new Headers(request.headers);
@@ -8,6 +8,9 @@ export async function GET(request: NextRequest) {
   const headersList = await headers();
   console.log(headersList.get('Authorization'));
   console.log(request.cookies.get('theme')?.value);
+
+  const cookieStore = await cookies();
+  cookieStore.set('resultsPerPage', '20');
 
   // return new Response(JSON.stringify({ data: 'API Response' }), {
   //   headers: { 'Content-Type': 'application/json' },
