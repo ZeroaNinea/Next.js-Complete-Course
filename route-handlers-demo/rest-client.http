@@ -1,6 +1,9 @@
 ### Get All Comments
 GET http://localhost:3000/comments
 
+### Get Comments by Query
+GET http://localhost:3000/comments?query=ir
+
 ### Make a Comment
 POST http://localhost:3000/comments
 Content-Type: application/json
