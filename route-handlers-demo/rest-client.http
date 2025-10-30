@@ -25,3 +25,6 @@ Content-Type: application/json
 
 ### Delete a Comment by ID
 DELETE http://localhost:3000/comments/3
+
+### Access Profile API
+GET http://localhost:3000/profile/api
