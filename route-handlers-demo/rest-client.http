@@ -8,3 +8,6 @@ Content-Type: application/json
 {
   "text": "New Comment"
 }
+
+### Get a Comment by ID
+GET http://localhost:3000/comments/1
