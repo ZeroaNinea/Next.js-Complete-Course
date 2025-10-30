@@ -33,3 +33,6 @@ Authorization: Bearer YOUR_ACCESS_TOKEN
 
 ### Get the Current Date
 GET http://localhost:3000/time
+
+### Get Categories
+GET http://localhost:3000/categories
