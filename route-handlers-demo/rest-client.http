@@ -19,3 +19,6 @@ Content-Type: application/json
 {
   "text": "Updated Comment"
 }
+
+### Delete a Comment by ID
+DELETE http://localhost:3000/comments/3

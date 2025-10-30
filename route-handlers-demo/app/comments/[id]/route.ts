@@ -29,3 +29,14 @@ export async function PATCH(
     status: 200,
   });
 }
+
+export async function DELETE(
+  _request: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const { id } = await params;
+  const index = comments.findIndex((c) => c.id === parseInt(id));
+  comments.splice(index, 1);
+
+  return new Response(null, { status: 204 });
+}
