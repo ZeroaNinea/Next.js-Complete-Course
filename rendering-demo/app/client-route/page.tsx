@@ -11,9 +11,12 @@ import './style.css';
 
 // import { serverSideFunction } from '@/utils/server-utils';
 
+import { useTheme } from '@/components/theme-provider';
+
 export default function ClientRoutePage() {
   // const result = serverSideFunction();
 
+  const theme = useTheme();
   const settings = {
     dots: true,
   };
@@ -54,6 +57,7 @@ export default function ClientRoutePage() {
           </div>
         </Slider>
       </div>
+      <h1 style={{ color: theme.colors.primary }}>Client Router Page</h1>
     </>
   );
 }
