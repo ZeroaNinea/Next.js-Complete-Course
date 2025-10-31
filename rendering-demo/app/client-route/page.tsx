@@ -4,9 +4,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
 
-import 'slick-carousel/silck/slick.css';
-import 'slick-carousel/silck/slick-theme.css';
-import './ImageSlider.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import './style.css';
 
@@ -30,13 +29,28 @@ export default function ClientRoutePage() {
       <div className="image-slider-container">
         <Slider {...settings}>
           <div>
-            <Image src="http://placekitten.com/g/400/200" alt="Kitten 1" />
+            <Image
+              src="/images/cat.jpg"
+              alt="Kitten 1"
+              width={400}
+              height={200}
+            />
           </div>
           <div>
-            <Image src="http://placekitten.com/g/400/200" alt="Kitten 2" />
+            <Image
+              src="/images/cat.jpg"
+              alt="Kitten 2"
+              width={400}
+              height={200}
+            />
           </div>
           <div>
-            <Image src="http://placekitten.com/g/400/200" alt="Kitten 3" />
+            <Image
+              src="/images/cat.jpg"
+              alt="Kitten 3"
+              width={400}
+              height={200}
+            />
           </div>
         </Slider>
       </div>
