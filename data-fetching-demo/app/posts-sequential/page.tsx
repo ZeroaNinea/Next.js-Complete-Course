@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Author } from './author';
 
 type Post = {
@@ -23,7 +24,13 @@ export default async function PostsSequential() {
               {post.title}
             </h2>
             <p className="text-gray-600 mb-4 leading-relaxed">{post.body}</p>
-            <Author userId={post.userId} />
+            <Suspense
+              fallback={
+                <div className="text-sm text-gray-500">Loading author...</div>
+              }
+            >
+              <Author userId={post.userId} />
+            </Suspense>
           </div>
         ))}
       </div>
