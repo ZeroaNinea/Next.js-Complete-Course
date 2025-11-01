@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+// import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
 
@@ -12,11 +12,13 @@ import './style.css';
 // import { serverSideFunction } from '@/utils/server-utils';
 
 import { useTheme } from '@/components/theme-provider';
+import { clientSideFunction } from '@/utils/client-utils';
 
 export default function ClientRoutePage() {
   // const result = serverSideFunction();
 
   const theme = useTheme();
+  const result = clientSideFunction();
   const settings = {
     dots: true,
   };
@@ -58,6 +60,7 @@ export default function ClientRoutePage() {
         </Slider>
       </div>
       <h1 style={{ color: theme.colors.primary }}>Client Router Page</h1>
+      <p>{result}</p>
     </>
   );
 }
