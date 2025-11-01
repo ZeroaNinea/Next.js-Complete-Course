@@ -1,3 +1,5 @@
+import { Author } from './author';
+
 type Post = {
   userId: number;
   id: number;
@@ -21,7 +23,7 @@ export default async function PostsSequential() {
               {post.title}
             </h2>
             <p className="text-gray-600 mb-4 leading-relaxed">{post.body}</p>
-            <p>Author name to be fetched.</p>
+            <Author userId={post.userId} />
           </div>
         ))}
       </div>
