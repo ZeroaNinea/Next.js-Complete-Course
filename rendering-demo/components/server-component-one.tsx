@@ -1,9 +1,9 @@
-import fs from 'fs';
+// import fs from 'fs';
 
 import { ServerComponentTwo } from './server-component-two';
 
 export const ServerComponentOne = () => {
-  fs.readFileSync('@/components/server-component-one.tsx', 'utf-8');
+  // fs.readFileSync('./server-component-one.tsx', 'utf-8');
 
   return (
     <>
