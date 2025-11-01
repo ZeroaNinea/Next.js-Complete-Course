@@ -37,4 +37,26 @@ export default function UsersClient() {
 
     fetchUsers();
   }, []);
+
+  if (loading) return <div>Loading...</div>;
+
+  if (error) return <div>{error}</div>;
+
+  return (
+    <ul className="space-y-4 p-4">
+      {users.map((user) => (
+        <>
+          <li
+            key={user.id}
+            className="p-4 bg-white shadow-md rounded-lg text-gray-700"
+          >
+            <div className="font-bold">{user.name}</div>
+            <div>Username: {user.username}</div>
+            <div>Email: {user.email}</div>
+            <div>Phone: {user.phone}</div>
+          </li>
+        </>
+      ))}
+    </ul>
+  );
 }
