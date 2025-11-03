@@ -1,4 +1,4 @@
-import { PrismaClient, Prisma } from '@/app/generated/prisma/client';
+import { PrismaClient, Prisma } from '../app/generated/prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -22,8 +22,8 @@ const productData: Prisma.ProductCreateInput[] = [
 ];
 
 export async function main() {
-  for (const u of productData) {
-    await prisma.product.create({ data: u });
+  for (const p of productData) {
+    await prisma.product.create({ data: p });
   }
 }
 
