@@ -32,6 +32,12 @@ Add the following configurations into the Tailwind CSS IntelliSense settings:
 }
 ```
 
+Use Prisma Studio:
+
+```bash
+npx prisma studio
+```
+
 ## Resources
 
 - [Codevolution YouTube course](https://youtu.be/b4ba60j_4o8?list=PLC3y8-rFHvwhIEc4I4YsRz5C7GOBnxSJY)
