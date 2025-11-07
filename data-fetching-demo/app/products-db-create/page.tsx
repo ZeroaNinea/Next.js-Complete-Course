@@ -14,7 +14,7 @@ export default function AddProductPage() {
   return (
     <form action={formAction} className="p-4 space-y-4 max-w-96">
       <div>
-        <label className="text-white">
+        <label className="text-gray-700">
           Title
           <input
             type="text"
@@ -27,7 +27,7 @@ export default function AddProductPage() {
         )}
       </div>
       <div>
-        <label className="text-white">
+        <label className="text-gray-700">
           Price
           <input
             type="number"
@@ -40,7 +40,7 @@ export default function AddProductPage() {
         )}
       </div>
       <div>
-        <label className="text-white">
+        <label className="text-gray-700">
           Description
           <textarea
             className="block w-full p-2 text-black border rounded"
